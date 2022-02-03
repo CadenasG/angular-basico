@@ -1,0 +1,28 @@
+<h1>{{nombre}}</h1>
+
+<dl>
+    <td>Nombre: </td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad: </td>
+    <dd>{{edad}}</dd>
+
+    <td>Función: </td>
+    <dd>{{obtenerEdad()}}</dd>
+
+    <td>Capitalizado: </td>
+    <dd>{{nombreCapitalizado}}</dd>
+</dl>
+
+<!-- *ngIf, *ngFor que no se te olviden -->
+
+<div *ngIf="boleana; else plantilla">
+    <h2>Boleana es igual a "true"</h2>
+</div>
+
+<ng-template #plantilla>
+    <h2>Boleana es igual a "false"</h2>
+</ng-template>
+<button (click)="boleana = !boleana">cambiar valor</button>
+
+<app-listado></app-listado>
